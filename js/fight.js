@@ -13,6 +13,10 @@ function fight(fighter, improvedFighter, ...points) {
     let fighter2 = improvedFighter;
     let round = makeRound();
 
+    if (points.length == 0) {
+        console.log('The fight was cancelled.');
+    }
+
     for (let i=0; i < points.length; i++) {
         let current_round = round();
 
