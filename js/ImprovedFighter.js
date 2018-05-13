@@ -3,7 +3,8 @@ class ImprovedFighter extends Fighter {
         super(name, power, health);
     }
 
-    doubleHit(enemy, point) {
-        super.hit(enemy, point);
+    doubleHit(enemy, point = 10) {
+        const double_point = (x) =>  { return 2 * x };
+        super.hit(enemy, double_point(point));
     }
 }
