@@ -18,6 +18,7 @@ function fight(fighter, improvedFighter, ...points) {
     }
 
     for (let i=0; i < points.length; i++) {
+        let point = points[i];
         let current_round = round();
 
         if (isFightFinished(current_round)) {
@@ -28,10 +29,10 @@ function fight(fighter, improvedFighter, ...points) {
         let victim;
 
         if (isFirstHit(current_round)) {
-            fighter1.hit(fighter2);
+            fighter1.hit(fighter2, point);
             victim = fighter2;
         } else {
-            fighter2.doubleHit(fighter1);
+            fighter2.doubleHit(fighter1, point);
             victim = fighter1;
         }
 
