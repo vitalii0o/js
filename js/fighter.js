@@ -21,7 +21,7 @@ class Fighter {
         if (isAlive) {
             console.log(`${this.name}: 'I am still alive.'`);
         } else {
-            console.log(`${this.name} is dead.`);
+            console.log(`😇 ${this.name} is dead.`);
         }
         return isAlive;
     }

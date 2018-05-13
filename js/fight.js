@@ -3,7 +3,7 @@ function makeRound() {
 
     return function() {
         console.log(`---------------------`);
-        console.log(`Round ${currentRound}`);
+        console.log(`*******ROUND ${currentRound}*******`);
         return currentRound++;
     };
 }
@@ -14,7 +14,7 @@ function fight(fighter, improvedFighter, ...points) {
     let round = makeRound();
 
     if (points.length == 0) {
-        console.log('The fight was cancelled.');
+        console.log('😐 The fight was cancelled.');
     }
 
     for (let i=0; i < points.length; i++) {
@@ -50,11 +50,11 @@ function getFightResult(fighter1, fighter2) {
     console.log('Fight has been finished.');
 
     if (fighter1.health <= 0 || (fighter1.health < fighter2.health)) {
-        console.log(`${fighter2.name} won the fight.`)
+        console.log(`😁 ${fighter2.name} won the fight.`)
     } else if (fighter2.health <= 0 || (fighter1.health > fighter2.health)) {
-        console.log(`${fighter1.name} won the fight.`)
+        console.log(`😁 ${fighter1.name} won the fight.`)
     } else if (fighter1.health == fighter2.health) {
-        console.log('Fight result: DRAW');
+        console.log('😲 Fight result: DRAW');
     } else {
         console.log('Houston, we have a problem');
     }
